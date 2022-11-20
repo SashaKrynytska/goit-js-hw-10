@@ -10,7 +10,7 @@ const refs = getRefs();
 refs.input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
-  let name = e.target.value;
+  let name = e.target.value.trim();
   if (!name) {
     refs.list.innerHTML = '';
     refs.info.innerHTML = '';
